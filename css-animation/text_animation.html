@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animated Text Example</title>
+	<style>
+		/* Set the styles for the body of the page */
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: yellow;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 6em;
+			font-weight: bold;
+			color: black;
+		}
+		
+		/* Set the styles for the word elements */
+		.word {
+			display: inline-block;
+			opacity: 0; /* Start with an opacity of 0 */
+			animation: fade-in 1s ease forwards; /* Apply the fade-in animation */
+		}
+		
+		/* Define the fade-in animation */
+		@keyframes fade-in {
+			from {
+				opacity: 0; /* Start with an opacity of 0 */
+				transform: translateY(10em); /* Translate the element up by 10em */
+			}
+			to {
+				opacity: 1; /* End with an opacity of 1 */
+				transform: translateY(0); /* Reset the translation */
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- Wrap each word in a span element with a class of 'word' -->
+	<div>
+		<span class="word">Those</span>
+		<span class="word">who</span>
+		<span class="word">don't</span>
+		<span class="word">remember</span>
+		<span class="word">the</span>
+		<span class="word">manual</span>
+		<span class="word">are</span>
+		<span class="word">condemned</span>
+		<span class="word">to</span>
+		<span class="word">re-read</span>
+		<span class="word">it</span>
+	</div>
+</body>
+</html>
